@@ -26,7 +26,6 @@ model Zap {
   trigger      Trigger?
   actions      Action[]
   zapRuns      ZapRun[]
-
 }
 
 model Trigger {
@@ -35,7 +34,6 @@ model Trigger {
   triggerId   String
   type  AvailableTrigger @relation(fields: [triggerId], references: [id])
   zap  Zap                @relation(fields: [zapId], references: [id])
-  sortingOrder Int    @default(0)
 }
 
 model Action {
