@@ -1,7 +1,7 @@
 import { EditorCanvasCardType } from "@/lib/types";
 import { useEditor } from "@/providers/editor-provider";
 import React, { useMemo } from "react";
-import { Position, useNodeId } from "@xyflow/react";
+import { Position, useNodeId } from "reactflow";
 import EditorCanvasIconHelper from "./editor-canvas-card-icon-hepler";
 
 import { Badge } from "@/components/ui/badge";
