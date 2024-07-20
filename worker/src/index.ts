@@ -4,12 +4,12 @@ import { Kafka } from "kafkajs";
 const TOPIC_NAME = "zap-events"
 
 const kafka = new Kafka({
-    clientId: 'outbox-processor',
+    clientId: 'outbox-processor-2',
     brokers: ['localhost:9092']
 })
 
 async function main() {
-    const consumer = kafka.consumer({ groupId: 'main-worker' });
+    const consumer = kafka.consumer({ groupId: 'main-worker-2' });
     await consumer.connect();
 
     await consumer.subscribe({ topic: TOPIC_NAME, fromBeginning: true })
@@ -23,7 +23,9 @@ async function main() {
             value: message.value?.toString(),
           })
           // 
-          await new Promise(r => setTimeout(r, 5000));
+          await new Promise(r => setTimeout(r, 500));
+
+          const zapId = message.value?.toString();
 
           console.log("processing done");
           // 
