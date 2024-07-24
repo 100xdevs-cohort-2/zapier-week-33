@@ -4,12 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "tsc -b && node dist/index.js"
+    "dev": "tsc -b && node dist/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "kafkajs": "^2.2.4"
+    "@prisma/client": "^5.17.0",
+    "@solana/web3.js": "^1.95.1",
+    "@types/bs58": "^4.0.4",
+    "@types/nodemailer": "^6.4.15",
+    "bs58": "^6.0.0",
+    "dotenv": "^16.4.5",
+    "kafkajs": "^2.2.4",
+    "nodemailer": "^6.9.14"
+  },
+  "devDependencies": {
+    "prisma": "^5.17.0"
   }
 }
