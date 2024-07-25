@@ -1,11 +1,22 @@
-import { ReactNode } from "react"
+import { ReactNode } from "react";
 
-export const SecondaryButton = ({ children, onClick, size = "small" }: {
-    children: ReactNode,
-    onClick: () => void,
-    size?: "big" | "small"
+export const SecondaryButton = ({
+  children,
+  onClick,
+  size = "small",
+}: {
+  children: ReactNode;
+  onClick: () => void;
+  size?: "big" | "small";
 }) => {
-    return <div onClick={onClick} className={`${size === "small" ? "text-sm" : "text-xl"} ${size === "small" ? "px-8 pt-2" : "px-10 py-4"} cursor-pointer hover:shadow-md border text-black border-black rounded-full`}>
-        {children}
+  return (
+    <div
+      onClick={onClick}
+      className={`${
+        size === "small" ? "text-sm px-8 py-2" : "text-xl px-12 py-3"
+      } cursor-pointer hover:shadow-md border text-black border-black rounded-full`}
+    >
+      {children}
     </div>
-}
+  );
+};
