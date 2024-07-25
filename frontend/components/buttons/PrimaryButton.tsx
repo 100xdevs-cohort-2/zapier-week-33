@@ -13,7 +13,7 @@ export const PrimaryButton = ({
     <div
       onClick={onClick}
       className={`${
-        size === "small" ? "text-sm px-8 py-2" : "text-xl px-12 py-3"
+        size === "small" ? "text-sm px-8 py-2" : "text-xl px-14 py-3"
       } 
     cursor-pointer hover:shadow-md bg-amber-700 text-white rounded-full text-center flex justify-center flex-col`}
     >
